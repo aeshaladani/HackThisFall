@@ -1,0 +1,136 @@
+@media only screen and (max-width: 1200px) {
+    .category-row span {
+        padding: 0 6px;
+    }
+}
+
+
+@media only screen and (max-width: 1110px) {
+    .fa-angle-down {
+        padding: 0 7px;
+    }
+
+    .category-row span {
+        padding: 0 3px;
+        font-size: 13.2px;
+        font-weight: 600;
+        color: #757575;
+    }
+
+    .category {
+        padding: 15px 0px
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .category2 {
+        display: block;
+    }
+
+    .category {
+        display: none;
+    }
+
+    .select-country {
+        display: none;
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+    header {
+        display: block;
+    }
+
+    input {
+        width: 70%;
+    }
+
+    .right-part {
+        position: absolute;
+        right: 5%;
+    }
+
+    .login-form {
+        padding: 40px 40px;
+    }
+
+    #login-page input {
+        font-size: 16px !important;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .form {
+        display: none;
+    }
+
+    .sell-botton {
+        position: fixed;
+        bottom: 10px;
+        left: 43%;
+    }
+
+    .login {
+        right: 5%;
+        color: white;
+        background-color: blue;
+        border-radius: 4px;
+    }
+
+    .row {
+        padding: 0 10px !important;
+    }
+
+    .my-card:hover {
+        transform: scale(1.05);
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .olx-back {
+        display: none;
+    }
+
+    #login-page input,
+    #login-page button {
+        width: 250px;
+    }
+
+}
+
+@media only screen and (max-width: 440px) {
+
+    #login-page input,
+    #login-page button {
+        width: 220px;
+    }
+
+    .login-form {
+        padding: 10px 30px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .post-date {
+        right: 12.5px;
+    }
+
+    .like {
+        right: 12.5px;
+    }
+
+    .location {
+        left: 12.5px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .col-6 {
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+}
