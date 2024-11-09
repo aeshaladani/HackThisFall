@@ -1,2 +1,7 @@
-# Inshaan-frontend-task-olx
-Front End Task To Copy OLX Site
+EcoLink is an innovative platform that connects businesses generating industrial waste with those that can repurpose it as valuable raw materials. By facilitating the exchange of by-products, EcoLink promotes sustainable resource utilization and helps reduce environmental impact.
+
+EcoLink addresses three critical issues in industrial waste management: Waste Accumulation, Environmental Impact, and Financial Burden. By redirecting industrial by-products from landfills to new applications, EcoLink helps businesses reduce waste accumulation. This responsible reuse minimizes pollution and promotes sustainability, lowering environmental impact. Additionally, by reducing disposal costs and creating new revenue streams, EcoLink addresses the financial burden associated with waste management.
+
+The EcoLink website serves as a marketplace where waste generators and buyers can connect and negotiate directly, supporting a circular economy across various industries. Key features of the platform include a Waste Listings section, where businesses can create detailed listings for available waste materials, and a Search & Filter tool, allowing buyers to locate specific raw materials easily. EcoLink also offers a Negotiation Platform for streamlined transactions between waste generators and buyers.
+
+Technologies used in building EcoLink include HTML, CSS, and JavaScript for front-end development, enabling responsive design and user interactivity, and MongoDB, which manages and stores listings, user data, and transaction records.
