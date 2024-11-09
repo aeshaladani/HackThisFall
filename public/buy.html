@@ -3,45 +3,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Item Details</title>
-    <link rel="stylesheet" href="buy.css">
+    <title>Buy Now</title>
+    <style>
+        /* Basic styling for the form */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .buy-now-container {
+            width: 400px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .buy-now-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .form-group input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        .form-group .radio-group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .buy-now-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .buy-now-btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Success message */
+        .success-message {
+            display: none;
+            color: green;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
 </head>
 <body>
-    <div class="item-container">
-        <h1>Item Details</h1>
-        <div class="item-details">
-            <img id="itemPhoto" src="item-image.jpg" alt="Item Photo">
-            <div class="details-text">
-                <h2 id="itemName">Item Name</h2>
-                <p><strong>Price:</strong> ₹<span id="itemPrice">123</span></p>
-                <p><strong>Quantity:</strong> <span id="itemQuantity">10</span></p>
-                <p><strong>Short Description:</strong> <span id="itemShortDescription">Brief description of the item.</span></p>
-                <p><strong>Basic Details:</strong> <span id="itemBasicDetails">Detailed item information.</span></p>
-                <p><strong>Email:</strong> <span id="itemEmail">seller@example.com</span></p>
-                <p><strong>Contact:</strong> <span id="itemContact">9876543210</span></p>
-            </div>
-        </div>
+        <div class="buy-now-container">
+            <h2>Buy Now</h2>
+            <form id="buyNowForm">
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="cn">Contact Details:</label>
+                    <input type="integer" id="cn" name="cn" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+    
+                
+    
+                <div class="form-group">
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="100" required>
+                </div>
+    
+                <div class="form-group">
+                    <label>Payment Mode:</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="payment" value="Credit Card" required> Credit Card</label>
+                        <label><input type="radio" name="payment" value="Debit Card" required> Debit Card</label>
+                        <label><input type="radio" name="payment" value="PayPal" required> PayPal</label>
+                    </div>
+                </div>
+    
+                <button type="button" class="buy-now-btn" onclick="submitForm()">Buy Now</button>
+                <p class="success-message" id="successMessage">Your order has been placed successfully!</p>
+            </form>
+
     </div>
 
-    <!-- Buy Button -->
-    <button id="buyButton" onclick="buyItem()">Buy This Item</button>
+    <script>
+        // JavaScript function to handle form submission
+        function submitForm() {
+            const name = document.getElementById("name").value;
+            const address = document.getElementById("address").value;
+            const quantity = document.getElementById("quantity").value;
+            const paymentMethods = document.getElementsByName("payment");
+            let selectedPayment = '';
 
-    <h3>Leave a Review or Comment</h3>
-    <form id="reviewForm">
-        <label for="reviewerName">Your Name:</label>
-        <input type="text" id="reviewerName" required>
+            // Loop to find the selected payment mode
+            for (const method of paymentMethods) {
+                if (method.checked) {
+                    selectedPayment = method.value;
+                    break;
+                }
+            }
 
-        <label for="reviewText">Your Review or Comment:</label>
-        <textarea id="reviewText" required></textarea>
+            if (name && address && quantity && selectedPayment) {
+                // Simulating form submission
+                document.getElementById("successMessage").style.display = "block";
 
-        <button type="submit">Submit Review</button>
-    </form>
-
-    <div id="reviewList">
-        <h3>Reviews & Comments</h3>
-        <ul id="reviewListDetails"></ul>
-    </div>
-
-    <script src="buy.js"></script>
+                // Clear the form after submission
+                document.getElementById("buyNowForm").reset();
+            } else {
+                alert("Please fill in all the fields.");
+            }
+        }
+    </script>
 </body>
 </html>

@@ -12,7 +12,7 @@ if (itemId) {
 function fetchItemData(itemId) {
     // Sample data (replace with actual API call or database query)
     const sampleItemData = {
-        item_name: "Eco-Friendly Bag",
+        item_name: ,
         item_price: "500",
         item_quantity: "10",
         item_shortDescription: "A biodegradable bag made from sustainable materials.",
