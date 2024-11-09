@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details</title>
+    <link rel="stylesheet" href="buy.css">
+</head>
+<body>
+    <div class="item-container">
+        <h1>Item Details</h1>
+        <div class="item-details">
+            <img id="itemPhoto" src="item-image.jpg" alt="Item Photo">
+            <div class="details-text">
+                <h2 id="itemName">Item Name</h2>
+                <p><strong>Price:</strong> ₹<span id="itemPrice">123</span></p>
+                <p><strong>Quantity:</strong> <span id="itemQuantity">10</span></p>
+                <p><strong>Short Description:</strong> <span id="itemShortDescription">Brief description of the item.</span></p>
+                <p><strong>Basic Details:</strong> <span id="itemBasicDetails">Detailed item information.</span></p>
+                <p><strong>Email:</strong> <span id="itemEmail">seller@example.com</span></p>
+                <p><strong>Contact:</strong> <span id="itemContact">9876543210</span></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Buy Button -->
+    <button id="buyButton" onclick="buyItem()">Buy This Item</button>
+
+    <h3>Leave a Review or Comment</h3>
+    <form id="reviewForm">
+        <label for="reviewerName">Your Name:</label>
+        <input type="text" id="reviewerName" required>
+
+        <label for="reviewText">Your Review or Comment:</label>
+        <textarea id="reviewText" required></textarea>
+
+        <button type="submit">Submit Review</button>
+    </form>
+
+    <div id="reviewList">
+        <h3>Reviews & Comments</h3>
+        <ul id="reviewListDetails"></ul>
+    </div>
+
+    <script src="buy.js"></script>
+</body>
+</html>

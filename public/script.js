@@ -50,13 +50,25 @@ document.addEventListener("DOMContentLoaded", function () {
     // Fetch and display items if the item list container is present
     if (document.getElementById("itemListDetails")) {
         fetchItems();
+        
+        // Add click event listener for opening buy.html
+        document.getElementById("itemListDetails").addEventListener("click", function(event) {
+            const clickedItem = event.target.closest(".item-card");
+            if (clickedItem) {
+                const itemId = clickedItem.getAttribute("data-item-id");
+                if (itemId) {
+                    // Open buy.html with item ID as a query parameter
+                    window.location.href = `buy.html?itemId=${itemId}`;
+                }
+            }
+        });
     }
 });
 
 // Function to fetch and display items
 async function fetchItems() {
     try {
-        const response = await fetch("/items"); // Assuming this fetches the list of items from your server
+        const response = await fetch("/items");
         const items = await response.json();
 
         const itemList = document.getElementById("itemListDetails");
@@ -65,6 +77,7 @@ async function fetchItems() {
         items.forEach(item => {
             const itemElement = document.createElement("div");
             itemElement.classList.add("item-card");  // Add class for item styling
+            itemElement.setAttribute("data-item-id", item._id);  // Store the item ID in a data attribute
 
             itemElement.innerHTML = `
                 <div class="item-image-container">
@@ -73,6 +86,7 @@ async function fetchItems() {
                             ? `<img src="/${item.itemImagePath}" alt="${item.itemName}" class="item-image">` 
                             : ""
                     }
+                </div>
                 <h3>${item.itemName}</h3>
                 <p><strong>Quantity:</strong> ${item.itemQuantity}</p>
                 <p><strong>Price:</strong> ₹${item.itemPrice}</p>
@@ -80,7 +94,6 @@ async function fetchItems() {
                 <p><strong>Details:</strong> ${item.itemDetails}</p>
                 <p><strong>Email:</strong> ${item.email}</p>
                 <p><strong>Contact:</strong> ${item.contact}</p>
-                </div>
             `;
             itemList.appendChild(itemElement);
         });
@@ -88,6 +101,3 @@ async function fetchItems() {
         console.error("Error fetching items:", error);
     }
 }
-
-// Fetch and display items when the page is loaded
-document.addEventListener("DOMContentLoaded", fetchItems);

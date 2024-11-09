@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa;
+}
+
+.item-container {
+    width: 80%;
+    margin: 30px auto;
+    padding: 30px;
+    background: linear-gradient(135deg, #ffffff, #f1f8e9);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+h1, h3 {
+    text-align: center;
+    color: #2e7d32;
+}
+
+.item-details {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.item-details img {
+    max-width: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.details-text p {
+    margin: 5px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #37474f;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 2px solid #64b5f6;
+    border-radius: 6px;
+    transition: border 0.2s;
+}
+
+input:focus, textarea:focus {
+    border-color: #42a5f5;
+    outline: none;
+    background-color: #e1f5fe;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+
+#reviewList {
+    margin-top: 20px;
+}
+
+#reviewListDetails {
+    list-style: none;
+    padding: 0;
+}
+
+#reviewListDetails li {
+    background-color: #c8e6c9;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
+}
+/* Styling specifically for Buy button */
+#buyButton {
+    margin-top: 20px;
+    width: 100%;
+    font-size: 18px;
+    background-color: #ff5722;
+}
+
+#buyButton:hover {
+    background-color: #e64a19;
+}
