@@ -1,0 +1,22 @@
+[
+  {
+    "itemName": "Wood",
+    "itemQuantity": "20",
+    "itemPrice": "2000",
+    "itemDescription": "best quality",
+    "itemDetails": "Better situation",
+    "email": "yashvikhatri26@gmail.com",
+    "contact": "9432944834",
+    "itemImagePath": "uploads\\1731161407504-Screenshot 2024-10-26 165700.png"
+  },
+  {
+    "itemName": "cement",
+    "itemQuantity": "10",
+    "itemPrice": "200",
+    "itemDescription": "Better to use",
+    "itemDetails": "Nice Quality",
+    "email": "kusumkjhew32@gmail.com",
+    "contact": "9723423643",
+    "itemImagePath": "uploads\\1731162259964-Screenshot 2024-10-15 161722.png"
+  }
+]
