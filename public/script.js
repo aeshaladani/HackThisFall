@@ -73,7 +73,6 @@ async function fetchItems() {
                             ? `<img src="/${item.itemImagePath}" alt="${item.itemName}" class="item-image">` 
                             : ""
                     }
-                </div>
                 <h3>${item.itemName}</h3>
                 <p><strong>Quantity:</strong> ${item.itemQuantity}</p>
                 <p><strong>Price:</strong> ₹${item.itemPrice}</p>
@@ -81,6 +80,7 @@ async function fetchItems() {
                 <p><strong>Details:</strong> ${item.itemDetails}</p>
                 <p><strong>Email:</strong> ${item.email}</p>
                 <p><strong>Contact:</strong> ${item.contact}</p>
+                </div>
             `;
             itemList.appendChild(itemElement);
         });

@@ -525,12 +525,19 @@ body {
 /* Flexbox container to hold the items */
 #itemListDetails {
     display: flex;
-    flex-wrap: wrap;
+    width: fit-content;
+    height: fit-content;
     justify-content: flex-start;
     gap: 20px; /* Space between items */
     padding: 20px;
     overflow: hidden; /* Prevent overflow */
     flex-grow: 1; /* Ensure the container grows to fill the available space */
+}
+#itemListDetails h3{
+    font-size: 20px;
+}
+#itemListDetails p{
+    font-size: 14px;
 }
 
 /* Style for individual item cards */
@@ -565,14 +572,6 @@ body {
     border-radius: 8px;
 }
 
-/* Footer styling */
-footer {
-    margin-top: auto;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    text-align: center;
-}
 
 
 #like01,
@@ -631,6 +630,7 @@ footer {
 
 .load-more {
     display: flex;
+    z-index: 1;
     justify-content: center;
     align-items: center;
     padding: 10px 6px;
