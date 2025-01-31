@@ -4,7 +4,6 @@
     }
 }
 
-
 @media only screen and (max-width: 1110px) {
     .fa-angle-down {
         padding: 0 7px;
@@ -18,7 +17,7 @@
     }
 
     .category {
-        padding: 15px 0px
+        padding: 15px 0px;
     }
 }
 
@@ -32,14 +31,11 @@
     }
 
     .select-country {
-        display: none;
+        display: block;
     }
 }
 
-
-
 @media only screen and (max-width: 768px) {
-
     header {
         display: block;
     }
@@ -49,7 +45,7 @@
     }
 
     .right-part {
-        position: absolute;
+        position: relative;
         right: 5%;
     }
 
@@ -62,23 +58,33 @@
     }
 }
 
-
 @media only screen and (max-width: 600px) {
     .form {
-        display: none;
+        display: block;
     }
 
     .sell-botton {
-        position: fixed;
-        bottom: 10px;
-        left: 43%;
-    }
-
-    .login {
-        right: 5%;
         color: white;
         background-color: blue;
         border-radius: 4px;
+        position:fixed; /* Prevents absolute positioning affecting it */
+        margin: 0 auto;/* Properly center the button */
+    }
+
+    .login {
+        color: white;
+        background-color: blue;
+        border-radius: 4px;
+        position: relative; /* Prevents absolute positioning affecting it */
+        margin: 0 auto; /* Centers the login button horizontally */
+    }
+
+    .chat-button{
+        color: white;
+        background-color: blue;
+        border-radius: 4px;
+        position: relative; /* Prevents absolute positioning affecting it */
+        margin: 0 auto; 
     }
 
     .row {
@@ -99,11 +105,9 @@
     #login-page button {
         width: 250px;
     }
-
 }
 
 @media only screen and (max-width: 440px) {
-
     #login-page input,
     #login-page button {
         width: 220px;
